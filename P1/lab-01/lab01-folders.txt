@@ -1,0 +1,11 @@
+total 8
+drwxr-xr-x@ 7 joserenteria  staff  224 Apr  3 16:23 P1
+drwxr-xr-x@ 3 joserenteria  staff   96 Apr  3 16:23 P2
+drwxr-xr-x@ 3 joserenteria  staff   96 Apr  3 16:23 P3
+drwxr-xr-x@ 3 joserenteria  staff   96 Apr  3 16:23 P4
+drwxr-xr-x@ 3 joserenteria  staff   96 Apr  3 16:23 P5
+drwxr-xr-x@ 3 joserenteria  staff   96 Apr  3 16:23 P6
+drwxr-xr-x@ 3 joserenteria  staff   96 Apr  3 16:23 P7
+drwxr-xr-x@ 3 joserenteria  staff   96 Apr  3 16:23 P8
+-rw-r--r--  1 joserenteria  staff   68 Apr  3 16:33 README.md
+-rw-r--r--  1 joserenteria  staff    0 Apr  6 13:16 lab01-folders.txt
