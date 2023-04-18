@@ -19,9 +19,18 @@ function returnRandomString()
 	const chars = "abcdefghijklmnopqrstuvwxyz";
 	for(let i = 0; i < getRandomInteger(5, 26); i ++) // for loop structure 
 	{
-		emp += chars[getRandomInteger(0, 25)]; // accumulate to our empty string by generating a random index in our lowercase chars str	
+		emp += getRandomLetter(); // accumulate to our empty string by generating a random index in our lowercase chars str	
 	}
 	return emp;
 }
 
+// returns a single, random, lowercase letter
+function getRandomLetter()
+{
+	const chars = "abcdefghijklmnopqrstuvwxyz";
+	let char = chars[getRandomInteger(0, 25)];
+	return char;
+}
+
 console.log(returnRandomString())
+console.log(getRandomLetter())
