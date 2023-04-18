@@ -48,7 +48,6 @@ function getRandomString(minLength, maxLength)
 function getSortedString(str)
 {
 	return str.split('').sort().join('');
-
 }
 
 console.log(returnRandomString());
