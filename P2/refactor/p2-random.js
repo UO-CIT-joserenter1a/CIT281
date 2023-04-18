@@ -32,7 +32,7 @@ function getRandomLetter()
 	return char;
 }
 
-// returns a random length string between specified lengths
+// returns a random length string between inputted lengths
 function getRandomString(minLength, maxLength)
 {
 	let emp = "";
@@ -44,6 +44,14 @@ function getRandomString(minLength, maxLength)
 	return emp;
 }
 
+// will return a string in ascending order, splits str into array of chars, sorts them, and re-concatenates them at the end using join
+function getSortedString(str)
+{
+	return str.split('').sort().join('');
+
+}
+
 console.log(returnRandomString());
 console.log(getRandomLetter());
 console.log(getRandomString(10, 20));
+console.log(getSortedString("xpacd"));
