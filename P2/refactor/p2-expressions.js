@@ -6,14 +6,14 @@
 // lowercase chars
 
 // helper function to generate random int
-function getRandomInteger(min, max)
+const getRandomInteger = function(min, max)
 {
 	return Math.floor(Math.random() * (max - min) + min);
 }
 
  // empty string to accumulate to
  // random length between 5 (inclusive) and 26 (exclusive)
-function returnRandomString()
+const returnRandomString = function()
  {
 	let emp = "";
 	const chars = "abcdefghijklmnopqrstuvwxyz";
@@ -25,7 +25,7 @@ function returnRandomString()
 }
 
 // returns a single, random, lowercase letter
-function getRandomLetter()
+const getRandomLetter = function()
 {
 	const chars = "abcdefghijklmnopqrstuvwxyz";
 	let char = chars[getRandomInteger(0, 25)];
@@ -45,7 +45,7 @@ function getRandomString(minLength, maxLength)
 }
 
 // will return a string in ascending order, splits str into array of chars, sorts them, and re-concatenates them at the end using join
-function getSortedString(str)
+const getSortedString = function(str)
 {
 	return str.split('').sort().join('');
 }
