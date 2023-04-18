@@ -32,5 +32,18 @@ function getRandomLetter()
 	return char;
 }
 
-console.log(returnRandomString())
-console.log(getRandomLetter())
+// returns a random length string between specified lengths
+function getRandomString(minLength, maxLength)
+{
+	let emp = "";
+	const chars = "abcdefghijklmnopqrstuvwxyz";
+	for(let i = 0; i < getRandomInteger(minLength, maxLength); i ++) // for loop structure 
+	{
+		emp += getRandomLetter(); // accumulate to our empty string by generating a random index in our lowercase chars str	
+	}
+	return emp;
+}
+
+console.log(returnRandomString());
+console.log(getRandomLetter());
+console.log(getRandomString(10, 20));
