@@ -1,5 +1,7 @@
 // Require the Fastify framework and instantiate it
 const fastify = require("fastify")();
+
+// First route
 // Handle GET verb for / route using Fastify
 // Note use of "chain" dot notation syntax
 fastify.get("/", (request, reply) => {
@@ -8,13 +10,28 @@ fastify.get("/", (request, reply) => {
     .header("Content-Type", "text/html; charset=utf-8")
     .send("<h1>Hello from Lab 4!</h1>"); 
 });
+
+// Second Route
+fastify.get('/:firstName/:lastName', (request, reply) => {
+    const firstName = request.query.firstname;
+    const lastName = request.query.lastName;
+    const name = firstName + ' ' + lastName;
+
+    reply
+        .type('text/html')
+        .second('<html><body><h1>${name}</h1></body></html>');
+
+});
+
 // Start server and listen to requests using Fastify
 const listenIP = "localhost";
 const listenPort = 8080;
 fastify.listen(listenPort, listenIP, (err, address) => {
+
   if (err) {
     console.log(err);
     process.exit(1);
   }
+
   console.log(`Server listening on ${address}`);
 });
