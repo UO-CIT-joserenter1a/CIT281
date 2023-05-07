@@ -1,0 +1,15 @@
+Copy selected text to clipboard (copy/paste buffer)
+Paste from buffer
+Cut selected text to buffer (selected text is deleted)
+Save current file in VSCode
+Toggle block comment in VSCode
+Toggle line comment in VSCode
+Move cursor from word to word right
+Move cursor from word to word left
+Select word right
+Select word left
+Select all contents
+Select current line, including end of line character
+Jump to start of line
+Jump to end of line
+Jump to beginning of current file

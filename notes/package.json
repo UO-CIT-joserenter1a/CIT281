@@ -1,0 +1,19 @@
+{
+  "name": "tailwind",
+  "version": "1.0.0",
+  "description": "css",
+  "main": "basicserver.js",
+  "scripts": {
+    "test": "-t",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "CIT281"
+  },
+  "keywords": [
+    "t"
+  ],
+  "author": "me",
+  "license": "ISC"
+}
