@@ -1,7 +1,7 @@
 /*
 Jose Renteria Lab 3
 */
-// TODO Part 11: Import reverseString() and concatenateString()
+// TODO Part 1: Import reverseString() and concatenateString()
 // functions from lab-03-module.js module using require()
 
 // Declare a specific car object
@@ -19,9 +19,7 @@ let car = {
     ]
 }
 
-// Assign car VIN number and year to constant variables
 
-const {vin, year} = car;
 
 // TODO Part 2: Create vin and year variables using object destructuring
 // Comment out the original code using single line comments
@@ -31,13 +29,11 @@ const {vin, year} = car;
    with either vin and year or make and model.
 */
 
-// Declare a normal function that returns formatted car info
-function getCarMakeModel(car) {
-    return car.make + " " + car.model;
-}
-const getCarMakeModelImplicit = (car) => car.make + " " + car.model;
-console.log(0, getCarMakeModel(car));
-console.log(1, getCarMakeModelImplicit(car));
+// Assign car VIN number and year to constant variables
+
+const {vin, year} = car;
+
+
 
 // TODO Part 3: Create arrow function expression getCarMakeModelImplicit
 // and template literal that returns the same formatted car info as
@@ -46,13 +42,15 @@ console.log(1, getCarMakeModelImplicit(car));
 // Include a console.log statement similar to getCarMakeModel,
 // but increment the number from 0 to 1.
 
-
-
-const getCarMakeModelExplicit = (param) => 
-{
-    return param.make + " " + param.model;
+// Declare a normal function that returns formatted car info
+function getCarMakeModel(car) {
+    return car.make + " " + car.model;
 }
-console.log(1, getCarMakeModelExplicit(car));
+const getCarMakeModelImplicit = (car) => car.make + " " + car.model;
+console.log(0, getCarMakeModel(car));
+console.log(1, getCarMakeModelImplicit(car));
+
+
 
 // TODO Part 4: Create arrow function expression getCarMakeModelExplicit
 // and template literal that returns the same formatted car info as
@@ -60,24 +58,38 @@ console.log(1, getCarMakeModelExplicit(car));
 // statement (use explicit return)
 // Include a console.log statement similar to getCarMakeModel,
 // but increment the number from 0 to 2.
-
-const getCarMakeModelDestructure = (car) => 
+const getCarMakeModelExplicit = (param) => 
 {
-    // destructure car to get var model
-    // return model
+    return param.make + " " + param.model;
 }
+console.log(2, getCarMakeModelExplicit(car));
+
+
 // TODO Part 5: Create arrow function expression getCarMakeModelDestructure
 // and template literal that returns the same formatted car info as
 // getCarMakeModel(). The arrow function MUST destructure the 
 // car properties, which will also require using an explicit return.
 // Include a console.log statement similar to getCarMakeModel,
 // but increment the number from 0 to 3.
+const getCarMakeModelDestructure = (car) => 
+{
+    const {make, model} = car;
+    return make + " " + model;
+    // destructure car to get var model
+    // return model
+}
+console.log(3, getCarMakeModelExplicit(model));
+
+
 
 // TODO Part 6: Study the following code that will list all 
 // properties of an object using for..in syntax. The
 // listing will include inherited properties, so the
 // hasOwnProperty() method is used to only list properties
 // defined in the current object
+
+
+
 for (let prop in car) {
     if (car.hasOwnProperty(prop)) {
         console.log(prop);
