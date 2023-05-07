@@ -12,21 +12,23 @@ fastify.get("/", (request, reply) => {
 });
 
 // Second Route
-fastify.get('/:firstName/:lastName', (request, reply) => {
-    const firstName = request.query.firstname;
-    const lastName = request.query.lastName;
-    const name = firstName + ' ' + lastName;
-
+fastify.get('/name', (request, reply) => {
+    
+    const {first, last} = request.query;
+    const name = first && last ?  `${first} ${last}` : 'Guest';
     reply
-        .type('text/html')
-        .second('<html><body><h1>${name}</h1></body></html>');
+        .code(200)
+        .header("Content-Type", "text/html; charset=utf-8")
+        .send(`<h1>Hello, ${name} </h1>`);
+    
+
 
 });
 
 // Start server and listen to requests using Fastify
 const listenIP = "localhost";
 const listenPort = 8080;
-fastify.listen(listenPort, listenIP, (err, address) => {
+fastify.listen({port: listenPort, IP: listenIP}, (err, address) => {
 
   if (err) {
     console.log(err);

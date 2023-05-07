@@ -1,7 +1,6 @@
 {
   "name": "lab-04",
   "version": "1.0.0",
-  "description": "",
   "main": "lab-04.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "fastify": "^4.17.0"
-  }
+  },
+  "description": ""
 }
