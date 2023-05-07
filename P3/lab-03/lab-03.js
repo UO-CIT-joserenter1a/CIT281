@@ -78,7 +78,7 @@ const getCarMakeModelDestructure = (car) =>
     // destructure car to get var model
     // return model
 }
-console.log(3, getCarMakeModelExplicit(model));
+console.log(3, getCarMakeModelExplicit(car));
 
 
 
@@ -87,8 +87,6 @@ console.log(3, getCarMakeModelExplicit(model));
 // listing will include inherited properties, so the
 // hasOwnProperty() method is used to only list properties
 // defined in the current object
-
-
 
 for (let prop in car) {
     if (car.hasOwnProperty(prop)) {
@@ -107,7 +105,9 @@ for (let index = 0; index < primes.length; index++) {
 
 for(let prop of primes)
 {
-    console.log("part 7", prop)
+    console.log("part 7: ", prop)
 }
 // TODO Part 12: Import and use reverseString() and concatenateString() in
 // a single line of code to produce the following output to the console: cbacba
+const mod = require('./lab-03-modules');
+console.log(mod.reverseString('abcabc'));
