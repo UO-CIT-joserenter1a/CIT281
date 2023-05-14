@@ -22,7 +22,6 @@ fastify.get('/name', (request, reply) => {
         .send(`<h1>Hello, ${name} </h1>`);
     
 
-
 });
 
 // Start server and listen to requests using Fastify
