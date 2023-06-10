@@ -78,6 +78,6 @@ console.log(`Book count: ${library.count}`);
 library.listBooks();
 
 // Delete a book and output library books
-console.log("* Library after delete *");
+console.log(`* Library after delete *`);
 library.deleteBook(0735211299);
 library.listBooks();

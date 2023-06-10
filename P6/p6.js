@@ -11,6 +11,7 @@ class Shape
         arr ? this.sides = arr : [];
     }
     perimeter = () => this.sides ? this.sides.reduce((total, side) => side + total, 0): 0;
+
 }
 
 class Rectangle extends Shape
@@ -41,38 +42,28 @@ class Triangle extends Shape
     }
 }
 
-function testShape()
+const data = [ [3, 4], [5, 5], [3, 4, 5], [10], [] ];
+for (const side of data)
 {
-    x = new Shape([5, 10]).perimeter();  // 15
-    y = new Shape([1, 2, 3, 4, 5]).perimeter(); // 15
-    z = new Shape().perimeter(); // 0
-    if(x == 15 && y == 15 && z == 0)
+    let shape = null;
+
+    switch(side.length)
     {
-        return (`Shape Class Success ✓`);
+        case 2:
+            shape = new Rectangle(...side);
+            const sq = side[0] == side[1] ? `Square` : `Rectangle`;
+            console.log(`${sq} with sides ${side} has perimeter of ${shape.perimeter()} and area of ${shape.area()}`);
+            break;
+        case 3:
+            shape = new Triangle(...side);
+            console.log(`Triangle with sides ${side} has perimeter of ${shape.perimeter()} and area of ${shape.area()}`);
+            break;
+        case 1:
+            console.log(`Shape with 1 side unsupported`);
+            break;
+        case 0:
+            console.log(`Shape with 0 sides unsupported`);
+            break;
+
     }
 }
-
-function testRect()
-{
-    x = new Rectangle(4, 4);
-    x_perim  = x.perimeter()
-    x_area = x.area();
-    y = new Rectangle(5, 5);
-    y_perim = y.perimeter();
-    y_area = y.area();
-    z = new Rectangle();
-    z_perim = z.perimeter();
-    z_area = z.area();
-    const check = (x_perim == 16 && x_area == 16 && y_perim == 20 && y_area == 25 && z_perim == 0 && z_area == 0);
-    return check ? (`Rectangle Class Success ✓`) : "Rectangle Class Failure";
-
-
-}
-
-console.log(testShape());
-console.log(testRect());
-
-console.log(new Triangle(3, 4, 5).perimeter());  // 12
-console.log(new Triangle(3, 4, 5).area());  // 6
-console.log(new Triangle().perimeter()); // 0
-console.log(new Triangle().area()); // 0
